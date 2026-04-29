@@ -1,24 +1,19 @@
-// Sayfa yüklendiğinde çalıştır
 document.addEventListener('DOMContentLoaded', () => {
-
-    // Kaydırma sırasında elemanları gösteren fonksiyon
-    function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
-
-        for (var i = 0; i < reveals.length; i++) {
-            var windowHeight = window.innerHeight;
-            var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 150; // Eleman ne kadar yaklaştığında görünsün
-
-            if (elementTop < windowHeight - elementVisible) {
-                reveals[i].classList.add("active");
+    
+    // Scroll Reveal (Aşağı kaydırdıkça belirme)
+    const reveals = document.querySelectorAll('.reveal');
+    
+    const handleScroll = () => {
+        reveals.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+            if (elementTop < window.innerHeight - 100) {
+                el.classList.add('active');
             }
-        }
-    }
+        });
+    };
 
-    // İlk yüklemede ve kaydırma yapıldığında kontrol et
-    window.addEventListener("scroll", reveal);
-    reveal(); // Sayfa açıldığında görünür olanları hemen aktif et
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // İlk yüklemede çalıştır
 
-    console.log("TKDF Web Arayüzü Başarıyla Yüklendi!");
+    console.log("TKDF Hazırlık Modu: Aktif.");
 });
