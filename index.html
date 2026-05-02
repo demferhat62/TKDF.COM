@@ -3,53 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TKDF | Çok Yakında</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>TKDF | Toprağa Değer Katma Platformu</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">TKDF</div>
+            <ul class="nav-links">
+                <li><a href="#ozet">Özet</a></li>
+                <li><a href="#ozellikler">Özellikler</a></li>
+                <li><a href="#yol-haritasi">Yol Haritası</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="bg-overlay"></div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Toprağa Değer Katma Platformu</h1>
+            <p>e-Devlet Entegreli, Yapay Zeka Destekli Ulusal Tarım Altyapısı</p>
+            <a href="#ozet" class="btn">Projeyi İncele</a>
+        </div>
+    </section>
 
-    <main class="coming-soon-container">
-        <div class="content animate-up">
-            <img src="logo.png" alt="TKDF Logo" class="main-logo">
-            <h1 class="glow-text">Çok Yakında</h1>
-            <p class="tagline">Toprağa Değer Katma Platformu Hazırlanıyor...</p>
-            
-            <div class="vision-box">
-                <p>Veri odaklı tarım teknolojileri ve kurumsal entegrasyon sistemleri ile toprağın gücünü dijitalleştiriyoruz.</p>
+    <section id="ozet" class="section">
+        <div class="container">
+            <h2>Proje Hakkında</h2>
+            <div class="highlight-box">
+                <p>TKDF, çiftçilerin tarımsal riskler karşısında anlık ve güvenilir uzman desteğine ulaşamama problemini; e-Devlet ve TKGM altyapılarını entegre ederek çözen bir platformdur.</p>
+            </div>
+            <div class="success-badge">
+                <i class="fas fa-trophy"></i>
+                <span>TUA Astro Hackathon Genel 7.liği & Liseler Arası 1.lik</span>
             </div>
         </div>
-    </main>
+    </section>
 
-    <section class="sources-section">
+    <section id="ozellikler" class="section bg-light">
         <div class="container">
-            <h2 class="reveal">Veri ve Altyapı Kaynaklarımız</h2>
-            <div class="partner-grid">
-                <div class="partner-card reveal">
-                    <img src="edevlet-logo.png" alt="e-Devlet">
-                    <span>e-Devlet</span>
+            <h2>Temel Özellikler</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-id-card"></i>
+                    <h3>e-Devlet & TKGM</h3>
+                    <p>Parsel ve tapu verileri saniyeler içinde otonom olarak çekilir.</p>
                 </div>
-                <div class="partner-card reveal">
-                    <img src="ogm-logo.png" alt="OGM">
-                    <span>Orman Genel Müd.</span>
+                <div class="feature-card">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>Don Erken Uyarı</h3>
+                    <p>Meteorolojik verilere göre otonom risk bildirimi gönderilir.</p>
                 </div>
-                <div class="partner-card reveal">
-                    <img src="tkgm-logo.png" alt="TKGM">
-                    <span>Tapu Kadastro</span>
+                <div class="feature-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>AI Hastalık Teşhisi</h3>
+                    <p>Yapay zeka ile bitki hastalıkları anında tespit edilir.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Canlı OGM Desteği</h3>
+                    <p>Resmi ziraat mühendisleriyle görüntülü görüşme imkanı.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <section id="yol-haritasi" class="section">
         <div class="container">
-            <p class="disclaimer">
-                * Bu web sitesi bir eğitim projesi kapsamında hazırlanmıştır. 
-                Kurumsal logolar referans ve veri kaynağı belirtme amacıyla kullanılmıştır.
-            </p>
-            <p class="copyright">&copy; 2026 TKDF Platformu</p>
+            <h2>12 Aylık Yol Haritası</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>0-3 Ay</h4>
+                    <p>Yazılım altyapısının tamamlanması ve MVP geliştirme.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>4-6 Ay</h4>
+                    <p>Malatya pilot bahçelerinde 500 çiftçi ile saha testleri.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>7-12 Ay</h4>
+                    <p>Kamu kullanımı ve ulusal çapta yayılım.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TKDF - Toprağa Değer Katma Platformu. Tüm Hakları Saklıdır.</p>
+            <p>Danışman: Ekrem Uzunyol</p>
         </div>
     </footer>
 
