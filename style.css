@@ -1,136 +1,196 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #0d1b15;
-    color: white;
-    overflow-x: hidden;
+:root {
+    --primary-color: #2e7d32;
+    --secondary-color: #1b5e20;
+    --accent-color: #f1f8e9;
+    --text-color: #333;
+    --white: #ffffff;
 }
 
-/* Arka Plan ve Hero */
-.coming-soon-container {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: radial-gradient(circle at center, #1b4d3e 0%, #0d1b15 100%);
-    position: relative;
-    padding: 20px;
+    color: var(--white);
 }
 
-.main-logo {
-    max-width: 160px;
-    margin-bottom: 25px;
-    filter: drop-shadow(0 0 15px rgba(46, 125, 50, 0.5));
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+.hero p { font-size: 1.5rem; margin-bottom: 30px; }
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
 }
 
-.glow-text {
-    font-size: 4.5rem;
-    font-weight: 700;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-    background: linear-gradient(to bottom, #fff, #a5d6a7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 10px;
-}
+.btn:hover { background: var(--secondary-color); }
 
-.tagline {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #a5d6a7;
-    margin-bottom: 30px;
-}
+.section { padding: 60px 0; }
+.bg-light { background: var(--accent-color); }
 
-.vision-box {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 1rem;
-    opacity: 0.8;
-}
-
-/* Veri Kaynakları Alt Bölüm */
-.sources-section {
-    padding: 80px 0;
-    background: #ffffff;
-    color: #2d3436;
+h2 {
     text-align: center;
-}
-
-.sources-section h2 {
     margin-bottom: 40px;
-    color: #1b4d3e;
+    color: var(--primary-color);
 }
 
-.partner-grid {
+.highlight-box {
+    background: var(--accent-color);
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.success-badge {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* Kurum Logoları Efektleri */
+.kurum-logolari {
     display: flex;
     justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.partner-card {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 150px;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-.partner-card img {
-    max-height: 60px;
-    margin-bottom: 15px;
+.kurum-logo {
+    height: 80px;
+    object-fit: contain;
     filter: grayscale(100%);
-    transition: 0.3s;
+    opacity: 0.7;
+    transition: all 0.4s ease;
+    cursor: pointer;
 }
 
-.partner-card:hover img {
+.kurum-logo:hover {
     filter: grayscale(0%);
+    opacity: 1;
     transform: scale(1.1);
 }
 
-.partner-card span {
-    font-size: 0.85rem;
-    font-weight: 600;
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
-/* Footer */
-.footer {
-    padding: 40px 0;
-    background: #0d1b15;
+.feature-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
-.disclaimer {
-    font-size: 0.7rem;
-    color: rgba(255,255,255,0.4);
-    font-style: italic;
-    margin-bottom: 10px;
+.feature-card:hover {
+    transform: translateY(-5px);
 }
 
-.copyright {
-    font-size: 0.8rem;
-    color: #a5d6a7;
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
 }
 
-/* Animasyonlar */
-.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease; }
-.reveal.active { opacity: 1; transform: translateY(0); }
-
-.animate-up {
-    animation: fadeInUp 1.2s ease-out forwards;
+.timeline {
+    border-left: 3px solid var(--primary-color);
+    margin-left: 20px;
+    padding-left: 20px;
 }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
 }
 
-@media (max-width: 768px) {
-    .glow-text { font-size: 2.5rem; letter-spacing: 5px; }
-    .tagline { font-size: 1.1rem; }
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -31px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+footer {
+    background: #333;
+    color: var(--white);
+    text-align: center;
+    padding: 40px 0;
 }
